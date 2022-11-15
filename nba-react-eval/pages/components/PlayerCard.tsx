@@ -1,19 +1,25 @@
 import React from 'react'
 
 
-export default function PlayerCard() {
+export default function PlayerCard(player:any,image:any) {
 
   
   return (
     <>
-      <div>
-      {/* {playerJsonData.map((data: any) => (
-              <div key={data.pid} className="headshot">
-                {data.headshot}
-                {data.fn}, {data.ln} */}
-       <h3>player data here</h3>
-      
-    </div>
+      {player.map(data => (
+        <div key={data.pid}>
+          <h2>
+            Name: {data.fn} {data.ln}
+          </h2>
+        </div>
+      ))}
+      {image.map(data => (
+        <div>
+          <img src={data.headshot}/>
+        </div>
+      ))}
     </>
+      
+    
   )
-}
+      }

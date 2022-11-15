@@ -17,7 +17,7 @@ export default function Home() {
       console.log("LOOK HERE", { teamData });
 
       //fetch players
-      const playerresponse = await fetch(`/api/players`);
+      const playerresponse = await fetch('http://localhost:3000/api/players');
       const playerData = await playerresponse.json();
       setPlayerJsonData(playerData);
       console.log("Player data HERE", { playerData });
@@ -33,7 +33,9 @@ export default function Home() {
         <>
           <h1 className="text-3xl font-bold underline">Hello world!</h1>
           <div>
-            <PlayerCard player={firstName: {data.fn},} />
+            <PlayerCard
+              player={playerJsonData.fn}
+            image={playerJsonData.headshot} />
           </div>
         </>
       ) : (
