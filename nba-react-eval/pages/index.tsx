@@ -15,10 +15,9 @@ export default function Home() {
           <h1 className="text-3xl font-bold underline">Hello world!</h1>
           <div>
             <PlayerCard
-              player={playerJsonData}
-            image={playerJsonData} />
+              player={playerJsonData}/>
           </div>
-          <TeamList team={teamJsonData } />
+          <TeamList team={teamJsonData} />
         </>
       ) : (
         <LoadingScreen />
